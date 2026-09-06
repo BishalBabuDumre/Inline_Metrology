@@ -48,7 +48,7 @@ def plot_20_sample_sensor_dashboard(csv_file_path: str):
     colors = plt.cm.tab20(np.linspace(0, 1, 20))
     line_styles = ['-', '--', '-.', ':']
     style_combinations = list(itertools.product(line_styles, colors))
-    print(style_combinations)
+    #print(style_combinations)
     # =========================================================================
     # FIGURE 1: 1D LINE PLOTS (OES, VOLTAGE, CURRENT)
     # =========================================================================
