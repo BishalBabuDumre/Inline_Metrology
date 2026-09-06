@@ -1,10 +1,10 @@
 import pandas as pd
+from pathlib import Path
 from sklearn.preprocessing import StandardScaler
 from torch.utils.data import Dataset, DataLoader
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import os
 
 class MultiModal1DCNNVAE(nn.Module):
     def __init__(
@@ -187,8 +187,10 @@ class MultiModalOESDataset(Dataset):
 # =====================================================================
 
 if __name__ == "__main__":
-    csv_file_path = os.path.join('data', 'measurement', 'Measurement_Data.csv')
-    truth_path = os.path.join('data', 'measurement', 'Sample_Info.csv')
+    PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+
+    csv_file_path = PROJECT_ROOT / 'data' / 'measurement' / 'Measurement_Data.csv'
+    truth_path = PROJECT_ROOT / 'data' / 'measurement' / 'Sample_Info.csv'
 
     df_truth = pd.read_csv(truth_path, index_col=0)
     # Ground-truth targets dict mapping each sample_id (0 to 19) to [Thickness, Porosity]
