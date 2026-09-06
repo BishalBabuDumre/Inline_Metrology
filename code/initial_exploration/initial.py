@@ -1,8 +1,9 @@
-import os
+from pathlib import Path
 import pandas as pd
 import numpy as np
 
-client_csv_path = os.path.join('data', 'results', 'initial_exploration','20_samples_summary.csv')
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+client_csv_path = PROJECT_ROOT / 'data' / 'results' / 'initial_exploration' / '20_samples_summary.csv'
 
 def run_sample_grouped_sensor_audit(csv_file_path: str):
     print("=" * 75)
