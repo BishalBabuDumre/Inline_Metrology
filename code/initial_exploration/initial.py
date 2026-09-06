@@ -173,5 +173,5 @@ def run_sample_grouped_sensor_audit(csv_file_path: str):
 
 # Calling the function:
 if __name__ == "__main__":
-    measure_path =  os.path.join('data', 'measurement', 'Measurement_Data.csv')
+    measure_path = PROJECT_ROOT / 'data' / 'measurement' / 'Measurement_Data.csv'
     stats_summary = run_sample_grouped_sensor_audit(measure_path)
