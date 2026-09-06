@@ -1,12 +1,12 @@
-import os
+from pathlib import Path
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import itertools
 
-
-ir_plots_path = os.path.join('data', 'results', 'initial_exploration','ir_heatmaps.png')
-line_plots_path = os.path.join('data', 'results', 'initial_exploration','line_plots.png')
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+ir_plots_path = PROJECT_ROOT / 'data' / 'results' / 'initial_exploration' / 'ir_heatmaps.png'
+line_plots_path = PROJECT_ROOT / 'data' / 'results' / 'initial_exploration' / 'line_plots.png'
 
 def plot_20_sample_sensor_dashboard(csv_file_path: str):
     """
@@ -133,5 +133,5 @@ def plot_20_sample_sensor_dashboard(csv_file_path: str):
 
 #Calling the function:
 if __name__ == "__main__":
-    measure_path =  os.path.join('data', 'measurement', 'Measurement_Data.csv')
+    measure_path = PROJECT_ROOT / 'data' / 'measurement' / 'Measurement_Data.csv'
     plot_20_sample_sensor_dashboard(measure_path)
