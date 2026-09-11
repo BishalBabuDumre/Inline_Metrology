@@ -18,7 +18,10 @@ Go to a folder in your terminal or command prompt in your computer.
 ### 3. Install dependencies:
    pip install -r requirements.txt
 
-### 4. Run the script:
+### 4. Paste your data:
+   Go to folder main/data/measurement/ and paste your three files here.
+
+### 5. Run the script:
    cd code<br>
    cd initial_exploration<br>
    python initial.py (Does initial analysis on the data determining data types, duplicates, and missing values and prints it on the screen)<br>
